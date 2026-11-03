@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>怀庄酒业集团 · 茅台镇酱香白酒 · 始于1983</title>
+  <meta name="description" content="怀庄酒业（集团）有限责任公司，建于1983年，酱香型白酒原产地贵州仁怀市茅台镇最早的酿酒企业之一。">
+  <style>
+    :root {
+      --red-deep: #7a1f1f;
+      --red: #a42828;
+      --red-bright: #c0392b;
+      --gold: #d4af37;
+      --gold-light: #e9cf8b;
+      --ink: #2b1d16;
+      --paper: #f7f1e6;
+      --paper-2: #efe6d4;
+      --dark: #1a0f0b;
+      --serif: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+      --sans: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: var(--serif);
+    }
+
+    /* ---------- 导航 ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(26, 15, 11, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .nav-logo .seal {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #c0392b, #7a1f1f);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: var(--serif);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: rgba(233, 207, 139, 0.85);
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 2px;
+      transition: color .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(15, 8, 5, .72) 0%, rgba(15, 8, 5, .55) 45%, rgba(15, 8, 5, .88) 100%),
+        url("images/hq-building.png") center 30% / cover no-repeat;
+      color: #fff;
+    }
+
+    .hero-content {
+      padding: 120px 24px 80px;
+      max-width: 900px;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      border: 1px solid rgba(212, 175, 55, .6);
+      color: var(--gold-light);
+      padding: 6px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 6px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 7vw, 84px);
+      letter-spacing: 12px;
+      font-weight: 700;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, .55);
+      margin-bottom: 10px;
+    }
+
+    .hero .sub {
+      font-family: var(--serif);
+      font-size: clamp(18px, 2.6vw, 26px);
+      color: var(--gold-light);
+      letter-spacing: 8px;
+      margin-bottom: 34px;
+    }
+
+    .hero .divider {
+      width: 120px;
+      height: 2px;
+      margin: 0 auto 30px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero p.lead {
+      font-size: 17px;
+      color: rgba(255, 255, 255, .88);
+      max-width: 640px;
+      margin: 0 auto 44px;
+      letter-spacing: 1px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 42px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 4px;
+      font-size: 16px;
+      transition: all .3s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #d4af37, #b8912a);
+      color: #2b1d16;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, .35);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(212, 175, 55, .5);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(233, 207, 139, .7);
+      color: var(--gold-light);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(212, 175, 55, .15);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(233, 207, 139, .8);
+      font-size: 13px;
+      letter-spacing: 3px;
+      animation: bob 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translate(-50%, 0);
+      }
+
+      50% {
+        transform: translate(-50%, 8px);
+      }
+    }
+
+    /* ---------- 数字条 ---------- */
+    .stats {
+      background: linear-gradient(135deg, #21140e, #3a2013);
+      padding: 54px 24px;
+    }
+
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat .num {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 700;
+      background: linear-gradient(180deg, #f2dd9d, #d4af37);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat .num small {
+      font-size: 22px;
+    }
+
+    .stat .label {
+      color: rgba(233, 207, 139, .85);
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-top: 6px;
+    }
+
+    /* ---------- 通用区块 ---------- */
+    section {
+      padding: 96px 24px;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .sec-head {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .sec-head .en {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .sec-head h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: 8px;
+      color: var(--ink);
+    }
+
+    .sec-head h2 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .sec-head .line {
+      width: 64px;
+      height: 3px;
+      margin: 22px auto 0;
+      background: linear-gradient(90deg, var(--red), var(--gold));
+      border-radius: 2px;
+    }
+
+    /* ---------- 集团简介 ---------- */
+    .about {
+      background: var(--paper);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      font-size: 16.5px;
+      color: #4a3a2f;
+      text-align: justify;
+    }
+
+    .about-text .quote {
+      border-left: 4px solid var(--gold);
+      background: var(--paper-2);
+      padding: 16px 22px;
+      border-radius: 0 8px 8px 0;
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--red-deep);
+      margin-top: 26px;
+    }
+
+    .about-photo {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(43, 29, 22, .28);
+      transform: rotate(1.5deg);
+    }
+
+    .about-photo img {
+      width: 100%;
+      display: block;
+    }
+
+    .about-photo .badge {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(122, 31, 31, .95), rgba(164, 40, 40, .95));
+      color: #f7e9c8;
+      font-family: var(--serif);
+      padding: 12px 26px;
+      font-size: 15px;
+      letter-spacing: 3px;
+      border-top-right-radius: 12px;
+    }
+
+    /* ---------- 荣誉 ---------- */
+    .honor {
+      background: linear-gradient(180deg, #21140e, #2c1a10);
+      color: #f0e6d2;
+    }
+
+    .honor .sec-head h2 {
+      color: #f7efdd;
+    }
+
+    .honor .sec-head .en {
+      color: var(--gold-light);
+    }
+
+    .honor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .honor-card {
+      background: rgba(255, 255, 255, .045);
+      border: 1px solid rgba(212, 175, 55, .28);
+      border-radius: 12px;
+      padding: 34px 28px;
+      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+
+    .honor-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, .7);
+      background: rgba(212, 175, 55, .08);
+    }
+
+    .honor-card .ico {
+      font-size: 34px;
+      margin-bottom: 16px;
+    }
+
+    .honor-card h3 {
+      color: var(--gold-light);
+      font-size: 19px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .honor-card p {
+      font-size: 14.5px;
+      color: rgba(240, 230, 210, .75);
+    }
+
+    .honor-note {
+      margin-top: 44px;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+    }
+
+    .honor-note strong {
+      color: #f2dd9d;
+      font-size: 26px;
+    }
+
+    /* ---------- 三大基地 ---------- */
+    .bases {
+      background: var(--paper-2);
+    }
+
+    .base-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .base-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 38px 30px;
+      box-shadow: 0 10px 30px rgba(43, 29, 22, .08);
+      border-top: 4px solid var(--red);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .base-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(43, 29, 22, .15);
+    }
+
+    .base-card .no {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .base-card h3 {
+      font-size: 20px;
+      color: var(--red-deep);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .base-card p {
+      font-size: 15px;
+      color: #5c4a3d;
+    }
+
+    .base-tag {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 4px 14px;
+      background: rgba(164, 40, 40, .08);
+      color: var(--red);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* ---------- 工艺 12987 ---------- */
+    .craft {
+      background:
+        radial-gradient(1200px 500px at 50% -10%, rgba(164, 40, 40, .15), transparent),
+        var(--paper);
+    }
+
+    .craft-flow {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 60px;
+    }
+
+    .craft-step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 24px;
+      box-shadow: 0 8px 22px rgba(43, 29, 22, .08);
+      border: 1px solid rgba(164, 40, 40, .12);
+    }
+
+    .craft-step .big {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .craft-step .t {
+      font-size: 15px;
+      color: var(--ink);
+      letter-spacing: 1px;
+    }
+
+    .craft-arrow {
+      align-self: center;
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    .craft-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .craft-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 12px 34px rgba(43, 29, 22, .09);
+    }
+
+    .craft-box h3 {
+      color: var(--red-deep);
+      font-size: 21px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .craft-box p,
+    .craft-box li {
+      font-size: 15.5px;
+      color: #4a3a2f;
+    }
+
+    .craft-box ul {
+      list-style: none;
+    }
+
+    .craft-box li {
+      padding: 7px 0 7px 24px;
+      position: relative;
+    }
+
+    .craft-box li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--gold));
+    }
+
+    .craft-box .hl {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* ---------- 六大理由 ---------- */
+    .reasons {
+      background: linear-gradient(180deg, var(--paper-2), var(--paper));
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .reason {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 26px;
+      box-shadow: 0 8px 24px rgba(43, 29, 22, .07);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: transform .3s ease;
+    }
+
+    .reason:hover {
+      transform: translateY(-5px);
+    }
+
+    .reason .rn {
+      flex: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--red-deep));
+      color: #f7e9c8;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reason h3 {
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .reason p {
+      font-size: 14px;
+      color: #5c4a3d;
+    }
+
+    /* ---------- 九大优势 ---------- */
+    .adv {
+      background: var(--dark);
+      color: #f0e6d2;
+    }
+
+    .adv .sec-head h2 {
+      color: #f7efdd;
+    }
+
+    .adv .sec-head .en {
+      color: var(--gold-light);
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .adv-card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+      border: 1px solid rgba(212, 175, 55, .22);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: border-color .3s, transform .3s;
+    }
+
+    .adv-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .adv-card .num {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .adv-card h3 {
+      color: var(--gold-light);
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .adv-card p {
+      font-size: 14px;
+      color: rgba(240, 230, 210, .72);
+    }
+
+    /* ---------- 结语 CTA ---------- */
+    .cta {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(26, 15, 11, .86), rgba(26, 15, 11, .94)),
+        url("images/hq-plaza.png") center 40% / cover no-repeat;
+      padding: 130px 24px;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4.5vw, 48px);
+      letter-spacing: 10px;
+      margin-bottom: 18px;
+    }
+
+    .cta .sub {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 19px;
+      letter-spacing: 5px;
+      margin-bottom: 40px;
+    }
+
+    .cta .divider {
+      width: 100px;
+      height: 2px;
+      margin: 0 auto 34px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    /* ---------- 关注我们 ---------- */
+    .follow {
+      background: var(--paper-2);
+    }
+
+    .card-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(43, 29, 22, .12);
+      border: 1px solid rgba(164, 40, 40, .12);
+      text-align: center;
+    }
+
+    .contact-card {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .card-caption {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .card-caption span {
+      padding: 6px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background: rgba(164, 40, 40, .07);
+      color: var(--red-deep);
+      border: 1px dashed rgba(164, 40, 40, .4);
+    }
+
+    /* ---------- 页脚 ---------- */
+    footer {
+      background: #120a07;
+      color: rgba(240, 230, 210, .6);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    footer .brand {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 18px;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- 滚动显现 ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .craft-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .honor-grid,
+      .base-grid,
+      .reason-grid,
+      .adv-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .honor-grid,
+      .base-grid,
+      .reason-grid,
+      .adv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航 -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo"><span class="seal">怀庄</span>怀庄酒业集团</div>
+      <div class="nav-links">
+        <a href="#about">集团简介</a>
+        <a href="#honor">荣誉资质</a>
+        <a href="#bases">酿造基地</a>
+        <a href="#craft">匠心工艺</a>
+        <a href="#reasons">品质之选</a>
+        <a href="#adv">合作优势</a>
+        <a href="#follow">关注我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 首屏 -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="hero-kicker">中国酱香白酒核心产区 · 贵州茅台镇</span>
+      <h1>怀庄酒业</h1>
+      <div class="sub">始于 1983 · 茅台镇最早的酿酒企业</div>
+      <div class="divider"></div>
+      <p class="lead">
+        怀庄酒业（集团）有限责任公司建于 1983 年，坐落于酱香型白酒原产地——贵州省仁怀市茅台镇，
+        是集研发、生产、供应、销售于一体的集团企业，总部位于茅台镇怀庄路 009 号。
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-gold" href="#craft">探索酿造工艺</a>
+        <a class="btn btn-ghost" href="#about">了解怀庄</a>
+      </div>
+    </div>
+    <div class="hero-scroll">向下滚动 ▾</div>
+  </header>
+
+  <!-- 数字条 -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat reveal">
+        <div class="num">1983<small>年</small></div>
+        <div class="label">集团创立</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">1000<small>余人</small></div>
+        <div class="label">现有员工</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">5088<small>万元</small></div>
+        <div class="label">注册资金</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">200<small>余次</small></div>
+        <div class="label">各级表彰</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 集团简介 -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">About Huizhuang</div>
+        <h2>集团<em>简介</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            怀庄酒业（集团）有限责任公司建于 1983 年，是酱香型白酒原产地——贵州省仁怀市茅台镇最早的酿酒企业。
+            集团公司总部位于茅台镇怀庄路 009 号，现有员工 1000 余人，注册资金 5088 万元。
+          </p>
+          <p>
+            下属企业有怀庄贸易有限公司、茅宴酒业有限公司、茅台镇帝坛酒厂、茅台镇亮剑酒业有限公司、
+            茅台镇台粮酒业有限公司、茅台镇真酿轩酒业有限公司等多家公司，是一家从研发到生产、供应、销售一体化的集团企业。
+          </p>
+          <p>
+            四十余年来，怀庄集团取得稳健、长足的发展：得益于贵州省委、省政府对茅台酿酒产业的关心重视，
+            得益于仁怀市"品牌强市"战略的大力扶持，更得益于茅台镇得天独厚的气候、土壤、水质等酿酒优势资源。
+          </p>
+          <div class="quote">「 经中共仁怀市委批准，2012 年 8 月 16 日怀庄酒业集团党委正式成立——茅台镇第一家民营企业党委。 」</div>
+        </div>
+        <div class="about-photo reveal">
+          <img src="images/hq-building.png" alt="怀庄酒业集团办公楼">
+          <div class="badge">怀庄酒业集团总部 · 贵州茅台镇</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 荣誉 -->
+  <section class="honor" id="honor">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Honors &amp; Awards</div>
+        <h2>荣誉<em style="color:var(--gold)">资质</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="honor-grid">
+        <div class="honor-card reveal">
+          <div class="ico">🏆</div>
+          <h3>金凤杯奖</h3>
+          <p>1988 年荣获贵州省"金凤杯"奖，同年荣获中国名优博览会金奖。</p>
+        </div>
+        <div class="honor-card reveal">
+          <div class="ico">🥇</div>
+          <h3>贵州名酒提名奖</h3>
+          <p>2011 年荣获贵州省人民政府颁发的"贵州名酒提名奖"。</p>
+        </div>
+        <div class="honor-card reveal">
+          <div class="ico">📜</div>
+          <h3>贵州老字号</h3>
+          <p>老字号企业认证，全国驰名商标，历经岁月检验的诚信品牌。</p>
+        </div>
+        <div class="honor-card reveal">
+          <div class="ico">🎖️</div>
+          <h3>全国诚信守法乡镇企业</h3>
+          <p>中华人民共和国农业部授予"全国诚信守法乡镇企业"荣誉称号。</p>
+        </div>
+        <div class="honor-card reveal">
+          <div class="ico">🌟</div>
+          <h3>五次省级先进企业</h3>
+          <p>贵州省委、省政府 5 次授予"先进企业"称号，并授予全国精神文明建设工作先进单位荣誉。</p>
+        </div>
+        <div class="honor-card reveal">
+          <div class="ico">🏛️</div>
+          <h3>十强白酒企业</h3>
+          <p>遵义市五强白酒企业、仁怀市十强民营白酒企业、茅台镇十强白酒企业。</p>
+        </div>
+      </div>
+      <div class="honor-note reveal">
+        集团成立至今荣获国家（部）、省、市、镇各级表彰 <strong>200+</strong> 次<br>
+        —— 是仁怀获得表彰最多的民营酿酒企业 ——
+      </div>
+    </div>
+  </section>
+
+  <!-- 三大基地 -->
+  <section class="bases" id="bases">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Brewing Bases</div>
+        <h2>独资<em>三大规范基地</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="base-grid">
+        <div class="base-card reveal">
+          <div class="no">壹 / BASE 01</div>
+          <h3>集团公司总部</h3>
+          <p>位于茅台镇怀庄路 009 号，地处茅台河畔，是集团研发、生产与运营的核心枢纽。</p>
+          <span class="base-tag">茅台镇核心产区</span>
+        </div>
+        <div class="base-card reveal">
+          <div class="no">贰 / BASE 02</div>
+          <h3>仙人堡酿酒基地</h3>
+          <p>位于仁怀名酒工业园区合马镇，专注优质酱香基酒的酿造与储藏。</p>
+          <span class="base-tag">仁怀名酒工业园</span>
+        </div>
+        <div class="base-card reveal">
+          <div class="no">叁 / BASE 03</div>
+          <h3>青龙嘴包装仓储基地</h3>
+          <p>位于仁怀名酒工业园配套产业区坛厂镇，承担包装、仓储与物流配套。</p>
+          <span class="base-tag">配套产业区</span>
+        </div>
+      </div>
+      <p class="reveal"
+        style="text-align:center; margin-top:36px; color:#8a7461; font-family:var(--serif); letter-spacing:2px;">
+        三大基地均分布于茅台河东西两岸 · 坐拥茅台镇得天独厚的酿酒生态
+      </p>
+    </div>
+  </section>
+
+  <!-- 工艺 -->
+  <section class="craft" id="craft">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Craftsmanship</div>
+        <h2>匠心<em>工艺</em> · 一年一周期</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="craft-flow reveal">
+        <div class="craft-step"><span class="big">1</span><span class="t">年一个生产周期</span></div>
+        <span class="craft-arrow">➜</span>
+        <div class="craft-step"><span class="big">2</span><span class="t">两次投料</span></div>
+        <span class="craft-arrow">➜</span>
+        <div class="craft-step"><span class="big">9</span><span class="t">九次蒸煮</span></div>
+        <span class="craft-arrow">➜</span>
+        <div class="craft-step"><span class="big">8</span><span class="t">八次发酵</span></div>
+        <span class="craft-arrow">➜</span>
+        <div class="craft-step"><span class="big">7</span><span class="t">七次取酒</span></div>
+        <span class="craft-arrow">➜</span>
+        <div class="craft-step"><span class="big">5</span><span class="t">五年包装出厂</span></div>
+      </div>
+
+      <div class="craft-cols">
+        <div class="craft-box reveal">
+          <h3>🍶 传统大曲酱香工艺</h3>
+          <ul>
+            <li><span class="hl">端午踩曲，重阳投料</span>，顺应天时，道法自然</li>
+            <li>两次投料、固态发酵、高温制曲、高温堆积、高温摘酒</li>
+            <li>经分型储放、勾兑储放，<span class="hl">五年后包装出厂</span></li>
+            <li>以茅台镇优质糯高粱、小麦、茅台河水，配以"怀庄泉"天然优质地下泉水酿造</li>
+          </ul>
+        </div>
+        <div class="craft-box reveal">
+          <h3>✨ 品鉴特点</h3>
+          <ul>
+            <li><span class="hl">酱香突出</span>，幽雅细腻，酒体醇厚</li>
+            <li>回味悠长，<span class="hl">空杯留香</span>持久</li>
+            <li>饮后不上头、不口干，不影响第二天的工作状态</li>
+            <li>纯粮酿造、自然发酵，不添加任何香味成分（色素、甜味剂、香精等）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 六大理由 -->
+  <section class="reasons" id="reasons">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Why Huizhuang</div>
+        <h2>为什么喝<em>怀庄酱香酒</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="reason-grid">
+        <div class="reason reveal">
+          <div class="rn">一</div>
+          <div>
+            <h3>工艺特殊</h3>
+            <p>酿造工艺迥然不同于其他香型的酒，独树一帜。</p>
+          </div>
+        </div>
+        <div class="reason reveal">
+          <div class="rn">二</div>
+          <div>
+            <h3>易挥发物质少</h3>
+            <p>长期储存让刺激性物质充分挥发，口感更醇和。</p>
+          </div>
+        </div>
+        <div class="reason reveal">
+          <div class="rn">三</div>
+          <div>
+            <h3>酸度高</h3>
+            <p>是其他酒的 3 至 5 倍，主要以乙酸和乳酸为主。</p>
+          </div>
+        </div>
+        <div class="reason reveal">
+          <div class="rn">四</div>
+          <div>
+            <h3>酚类化合物多</h3>
+            <p>富含酚类化合物，风格独特。</p>
+          </div>
+        </div>
+        <div class="reason reveal">
+          <div class="rn">五</div>
+          <div>
+            <h3>酒精浓度科学合理</h3>
+            <p>科学合理的酒精度，饮用体验更佳。</p>
+          </div>
+        </div>
+        <div class="reason reveal">
+          <div class="rn">六</div>
+          <div>
+            <h3>天然发酵产品</h3>
+            <p>纯粮固态发酵，越陈越香，非常适合收藏。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 九大优势 -->
+  <section class="adv" id="adv">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Our Advantages</div>
+        <h2>选择怀庄的<em style="color:var(--gold)">九大优势</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="adv-grid">
+        <div class="adv-card reveal">
+          <div class="num">优势 01</div>
+          <h3>高贵出生</h3>
+          <p>来自中国酒都茅台镇 7.5 平方公里酱酒核心产区的正宗酱香白酒。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 02</div>
+          <h3>大酒厂，安全有保证</h3>
+          <p>历时 40 余年的自有酒厂，是茅台镇最早的民营企业。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 03</div>
+          <h3>传统工艺精酿</h3>
+          <p>"怀庄庄客"酒以优质糯高粱、小麦、水为原料，大曲酱香传统工艺精心酿造、储存、勾调而成。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 04</div>
+          <h3>纯粮酿制</h3>
+          <p>精选茅台镇本地糯高粱和优质小麦，酒水滴滴香醇，同价位口感可比市场上 3 到 5 倍价格产品。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 05</div>
+          <h3>价格实惠</h3>
+          <p>不怕比价，我们卖的就是性价比！</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 06</div>
+          <h3>只卖酱香酒</h3>
+          <p>我们的酒无勾兑、无添加，专注正宗大曲酱香。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 07</div>
+          <h3>十强白酒企业</h3>
+          <p>贵州茅台镇酱酒企业中誉列十强白酒企业。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 08</div>
+          <h3>大品牌影响力</h3>
+          <p>全国范围内影响力足够，老字号企业，得到消费者的广泛认可。</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="num">优势 09</div>
+          <h3>经销商利润可观</h3>
+          <p>市场操作空间大，经销商、代理商利润有保障，诚邀共赢。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关注我们 -->
+  <section class="follow" id="follow">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="en">Follow Us</div>
+        <h2>关注<em>我们</em></h2>
+        <div class="line"></div>
+      </div>
+      <div class="card-wrap reveal">
+        <img class="contact-card" src="././images/20261103142956_156_1274.png" alt="怀庄酒业集团 · 销售部经理名片（正面与背面）">
+        <div class="card-caption">
+          <span>微信扫码 · 加好友 / 了解详情</span>
+          <span>免费提供承酿酒设计图与待酿样酒</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div>
+      <h2>一杯怀庄 · 半部茅台镇酿造史</h2>
+      <div class="divider"></div>
+      <div class="sub">畅销全国 · 远销东南亚 · 诚邀品鉴与洽谈合作</div>
+      <a class="btn btn-gold" href="#about">了解更多怀庄故事</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">怀庄酒业（集团）有限责任公司</div>
+    <p>地址：贵州省仁怀市茅台镇怀庄路 009 号 &nbsp;|&nbsp; 始于 1983 年</p>
+    <p>销售部经理：雷俊俊 &nbsp;|&nbsp; 电话：19536589363 &nbsp;|&nbsp; 微信号：JJ0704L95</p>
+    <p>微信公众号 / 视频号：贵州怀庄酒业集团有限公司</p>
+    <p style="margin-top:8px; opacity:.6;">本页面用于企业宣传 · 怀庄酒业集团 版权所有</p>
+  </footer>
+
+  <script>
+    // 滚动显现动画
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {if (e.isIntersecting) {e.target.classList.add('visible'); io.unobserve(e.target);} });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
